@@ -1,23 +1,9 @@
-from flask import Flask, render_template
+from flask import Flask
+from routes.user import user_route
 
 app = Flask(__name__)
 
-@app.route('/')
-
-def pag_home():
-    user = [
-        {"Nome": "Python"},
-        {"Nome": "Python"},
-        {"Nome": "Python"},
-        {"Nome": "Python"},
-        {"Nome": "Python"},
-        {"Nome": "Python"},
-        {"Nome": "Python"},
-        {"Nome": "Python"},
-        {"Nome": "Python"},
-        {"Nome": "Python"},
-        {"Nome": "Python"}
-    ]
-    return render_template('index.htmal', x=user)
+# Blueprint -> é um comando para agrupador de rotas
+@app.register_blueprint(user_route)
 
 app.run(debug=True)
