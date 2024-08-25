@@ -1,30 +1,23 @@
-from flask import  Flash, request,  Response, render_template
+from flask import Blueprint, Response, request
 from db.models.api import Usuarios
 
-app = Flash(__name__)
+user_router = Blueprint('Usuarios' , __name__)
 
-@app.route('/')
-def home():
-    return render_template('index.html')
-
-@app.route('/Usuarios')
+@user_router.route('/Usuarios')
 def get_usuarios():
     usuarios_query = Usuarios.select()
     usuario = [usuario._data_ for usuario in usuarios_query]
     return Response(usuario)
 
 
-@app.route('/Usuarios' , methods=['POST'])
+@user_router.route('/Usuarios' , methods=['POST'])
 def create_post():
     data = request.json
     novo_usuario = {
         "nome": data['nome'],
         "text": data['text'],
     }
-
-    Usuarios.append(novo_usuario)
-    return render_template('index.html', usuario=novo_usuario)
-
+    return novo_usuario
        #Usuarios.append(usuario)
     #return make_response(
         #jsonify(usuario)
