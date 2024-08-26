@@ -11,12 +11,20 @@
 
   --primary-font: "Bungee Tint", sans-serif;
   --secondary-font: "Jost", sans-serif;
-  
-  
+
 
 }
 
 .App {
   text-align: center;
   transition: 0.3s ease-in-out;
+
+
+}
+
+body {
+  background-image: url('../public/falling-leaves-background.gif');
+  background-size: cover;
+  background-position: 60% ;
+  background-attachment: fixed;
 }

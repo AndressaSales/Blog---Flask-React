@@ -9,9 +9,7 @@ export const Header = () => {
           <p>Você escolhe!</p>
           <br />
           <p>Criado por <a href="https://www.instagram.com/omikaelbaracho/">Mikael Baracho</a> e <a href="https://www.instagram.com/andressa_salesss/">Andressa Sales</a>.</p>
-          <br />
-          
-          
+          <br />  
         </header>
       );
 };
@@ -20,7 +18,6 @@ export const ScrollingHeader = () => {
     return (
         <header className="scrolling-header">
           <h1>Blog Coletivo</h1>
-          
         </header>
     );
 };

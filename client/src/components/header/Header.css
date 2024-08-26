@@ -14,6 +14,7 @@
     justify-content: center;
     flex-direction: column;
 
+    border-bottom: black 4px solid;
 }
 
 .scrolling-header {
@@ -22,7 +23,6 @@
     background-position: center;
 
     height: 5em;
-    /* Set the desired height when scrolled */
     position: fixed;
 
     top: 0;
@@ -34,20 +34,21 @@
     justify-content: center;
 
     transition: height 0.3s ease-in-out;
+    border-bottom: black 4px solid;
 }
 
-h1 {
+.header h1, .scrolling-header h1 {
     font-family: var(--primary-font);
-     text-shadow: 0px 0px 7px black, 0px 0px 7px black, 0px 0px 7px black, 0px 0px 7px black;
+    text-shadow: 0px 0px 7px black, 0px 0px 7px black, 0px 0px 7px black, 0px 0px 7px black;
 }
 
-p {
+.header p {
     font-family: var(--secondary-font);
     color: white;
     text-shadow: 0px 0px 7px black, 0px 0px 7px black, 0px 0px 7px black, 0px 0px 7px black;
 }
 
-a {
+.header a {
     color: aquamarine;
 }
 
