@@ -1,0 +1,22 @@
+.header {
+    height: 30em;
+
+    background-image: url('./assets/falling-leaves.gif');
+    background-size: cover;
+    background-position: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    transition: height 0.3s ease-in-out;
+
+    position: relative;
+}
+
+.header.scrolling {
+    height: 8em; /* Set the desired height when scrolled */
+    position: fixed;
+  }
