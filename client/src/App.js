@@ -1,5 +1,5 @@
 import './App.css';
-import { Header } from './components/header/Header.jsx'
+import { Header, ScrollingHeader } from './components/header/Header.jsx'
 
 function App() {
   const paragraphs = [];
@@ -10,6 +10,7 @@ function App() {
 
   return (
     <div className="App">
+      <ScrollingHeader />
       <Header />
       {paragraphs}
     </div>

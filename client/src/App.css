@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +7,16 @@
   border: 0;
 }
 
+:root {
+
+  --primary-font: "Bungee Tint", sans-serif;
+  --secondary-font: "Jost", sans-serif;
+  
+  
+
+}
+
 .App {
   text-align: center;
+  transition: 0.3s ease-in-out;
 }
