@@ -1,9 +1,9 @@
 from flask import Flask
-from routes.user import user_route
+# importação do config
+from config import config_all
 
 app = Flask(__name__)
 
-# Blueprint -> é um comando para agrupador de rotas
-@app.register_blueprint(user_route)
+config_all(app)
 
 app.run(debug=True)
