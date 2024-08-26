@@ -4,13 +4,16 @@
 * **Objetivo:** Escreva o que vier à sua cabeça, nós registraremos pro mundo!
 * **Tecnologias:** React no front-end, Flask no back-end
 
-<h1 style="color: cyan"> Front-End </h1>
-
-**Desenvolvedor front-end chefe:** Mikael Baracho
+> **Desenvolvedor front-end chefe:** Mikael Baracho
 
 - Github: <a href='https://github.com/MikaelBarachoOficial'>MikaelBarachoOficial</a>
 - Instagram: <a href='https://www.instagram.com/omikaelbaracho/'>@omikaelbaracho</a>
 - Linkedin: <a href="https://www.linkedin.com/in/mikael-baracho-9190571b2/">Mikael Baracho</a>
+
+> **Desenvolvedor back-end chefe:** Andressa Sales - @andressa_salesss
+...
+
+<h1 style="color: cyan"> Front-End </h1>
 
 ## Uso
 * **Iniciando o projeto:** npm start
@@ -28,5 +31,4 @@
 * Não temos licença haha
 
 <h1 style="color: green"> Back-End </h1>
-**Desenvolvedor back-end chefe:** Andressa Sales - @andressa_salesss
 ...
