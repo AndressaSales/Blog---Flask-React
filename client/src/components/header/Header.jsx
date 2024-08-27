@@ -8,7 +8,7 @@ export const Header = () => {
       <p>Escreva seu nome ou envie de forma anônima.</p>
       <p>Você escolhe!</p>
       <br />
-      <p>Criado por <a href="https://www.instagram.com/omikaelbaracho/">Mikael Baracho</a> e <a href="https://www.instagram.com/andressa_salesss/">Andressa Sales</a>.</p>
+      <p>Criado por <a target='blank' href="https://www.instagram.com/omikaelbaracho/">Mikael Baracho</a> e <a target='blank' href="https://www.instagram.com/andressa_salesss/">Andressa Sales</a>.</p>
       <p>Front-end e back-end respectivamente.</p>
     </header>
   );

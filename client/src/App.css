@@ -15,16 +15,24 @@
 
 }
 
-.App {
-  text-align: center;
-  transition: 0.3s ease-in-out;
+.main-page {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:min-content; */
 
-
-}
-
-body {
   background-image: url('../public/falling-leaves-background.gif');
   background-size: cover;
   background-position: 60% ;
   background-attachment: fixed;
+
+  text-align: center;
+  
+}
+
+.dialogue-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

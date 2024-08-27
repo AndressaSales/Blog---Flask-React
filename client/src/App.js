@@ -1,5 +1,6 @@
 import './App.css';
 import { Header, ScrollingHeader } from './components/header/Header.jsx'
+import { WritingBox } from './components/writingBox/WritingBox.jsx'
 import getCurrentDateTime from './scripts/clock.js'
 
 function App() {
@@ -11,10 +12,15 @@ function App() {
 
   return (
     <div className="App">
-      <ScrollingHeader clock={getCurrentDateTime()} />
-      <Header />
+      <div className='main-page'>
+        <ScrollingHeader clock={getCurrentDateTime()} />
+        <Header />
 
-      {paragraphs}
+        <section className='dialogue-section'>
+          <WritingBox />
+          {paragraphs}
+        </section>
+      </div>
     </div>
   );
 }
