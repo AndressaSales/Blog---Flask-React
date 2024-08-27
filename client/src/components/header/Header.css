@@ -31,7 +31,7 @@
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 
     transition: height 0.3s ease-in-out;
     border-bottom: black 4px solid;
@@ -46,6 +46,13 @@
     font-family: var(--secondary-font);
     color: white;
     text-shadow: 0px 0px 7px black, 0px 0px 7px black, 0px 0px 7px black, 0px 0px 7px black;
+}
+
+.scrolling-header p {
+    font-family: var(--secondary-font);
+    color: rgb(33, 192, 192);
+    text-shadow: 0px 0px 7px black, 0px 0px 7px black, 0px 0px 7px black, 0px 0px 7px black;
+    font-size: 2rem;
 }
 
 .header a {

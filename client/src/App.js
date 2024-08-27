@@ -1,5 +1,6 @@
 import './App.css';
 import { Header, ScrollingHeader } from './components/header/Header.jsx'
+import getCurrentDateTime from './scripts/clock.js'
 
 function App() {
   const paragraphs = [];
@@ -10,8 +11,9 @@ function App() {
 
   return (
     <div className="App">
-      <ScrollingHeader />
+      <ScrollingHeader clock={getCurrentDateTime()} />
       <Header />
+
       {paragraphs}
     </div>
   );
