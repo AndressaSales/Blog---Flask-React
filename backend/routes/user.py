@@ -1,28 +1,22 @@
-from flask import Blueprint, render_template
-# importação da api
-from db.user import USUARIOS
+from flask import Blueprint, request, jsonify
+#from db.models.users import User
+from db.user import usuario
 
 # Blueprint -> é um comando para agrupador de rotas
-user_route = Blueprint('user', __name__)
+user_route = Blueprint('usuario', __name__)
 
-# para o post pronto
-@user_route.route('/')
+# rota para listar todos os usuarios
+@user_route.route('/user', methods=['GET'])
 def lista_user():
-   title = 'Publicações'
-   return render_template('lista.html', title=title, users=USUARIOS)
+    return jsonify(usuario)
+   
+# rota paracriar um novo usuario
+@user_route.route('/user', methods=['POST'])
+def create_user():
+    data = request.json
 
-# para postagem
-@user_route.route('/new')
-def form_user():
-    return render_template('index.html')
-
-
-# inserir dados do poster no banco de dados
-@user_route.route('/', methods=['POST'])
-def inserir_user():
-    pass
-
-# exibir detalhes de um usuario
-@user_route.route('/<int:user_id>')
-def detalhe_user(user_id):
-    return render_template()
+    new_user =  usuario.create(
+        nome = data['nome'],
+        post = data['post']
+    )
+    return jsonify({ 'nome': new_user.nome, 'post': new_user.post})
