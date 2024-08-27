@@ -15,6 +15,7 @@
     flex-direction: column;
 
     border-bottom: black 4px solid;
+    z-index: 1;
 }
 
 .scrolling-header {
@@ -35,6 +36,7 @@
 
     transition: height 0.3s ease-in-out;
     border-bottom: black 4px solid;
+    z-index: 0;
 }
 
 .header h1, .scrolling-header h1 {
@@ -68,4 +70,10 @@
         background-position: 0 45%;
     }
 
+}
+
+@media (max-width: 655px) {
+    .scrolling-header p {
+        display: none;
+    }
 }
