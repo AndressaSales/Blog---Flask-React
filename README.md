@@ -40,7 +40,8 @@
     * usando o:
         * **Python**~> uma lingaguem de programação versátil e amplamente utilizada conhecida por sua simplicidade e legibilidade. 
         * **Flask**~> Um micro framework web para o python, usado para aplicação web com APIs. 
-        * **Peewee**~> Uma biblioteca ORM (Object-RElational Mappin  g) para python, que facilita a interação com bancos de dados
+        * **Peewee**~> Uma biblioteca ORM (Object-RElational Mappin  g) para python, que facilita a interação com bancos de dados.
+        <br/>
     Com esses três elementos trabalhando juntos, foi possível criar uma API.
 * **Funcionalidade:**
     * **1. Recuperação de Dados (GET)**
