@@ -14,7 +14,7 @@
 
 - Github: <a href="https://github.com/AndressaSales"> Andressa Sales</a>
 - Linkedin: <a href="https://www.linkedin.com/in/andressa-sales-04553a281/">Andresssa Sales</a>
-...
+
 
 <h1 style="color: cyan"> Front-End </h1>
 
@@ -34,4 +34,17 @@
 * Não temos licença haha
 
 <h1 style="color: green"> Back-End </h1>
-...
+
+# uso
+* **Bliotecas e Framewors**
+    * usando o:
+        * **Python**~> uma lingaguem de programação versátil e amplamente utilizada conhecida por sua simplicidade e legibilidade. 
+        * **Flask**~> Um micro framework web para o python, usado para aplicação web com APIs. 
+        * **Peewee**~> Uma biblioteca ORM (Object-RElational Mappin  g) para python, que facilita a interação com bancos de dados
+    Com esses três elementos trabalhando juntos, foi possível criar uma API.
+* **Funcionalidade:**
+    * **1. Recuperação de Dados (GET)**
+        *Permite que obtenham informações de todos os registros em uma tabela.
+
+    * **2. Criação de Novos Registros (POST)**
+        * Usado para adicionar novos usuários e postagens.
