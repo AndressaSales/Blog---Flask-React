@@ -1,10 +1,92 @@
 @import '../../App.css';
 
+.writing-box-switch {
+    background-color: #43b1c2;
+    border-radius: 50%;
+    padding: 0.5em;
+    margin-top: 1em;
+
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.writing-box-switch:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.writing-box-switch:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.writing-box-switch #checkbox {
+    display: none;
+}
+
+.writing-box-switch .toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: 0.5s;
+}
+
+.writing-box-switch .bars {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
+
+.writing-box-switch #bar2 {
+    transition-duration: .8s;
+}
+
+.writing-box-switch #bar1,
+.writing-box-switch #bar3 {
+    width: 70%;
+}
+
+.writing-box-switch #checkbox:checked+.toggle .bars {
+    position: absolute;
+    transition-duration: .5s;
+}
+
+.writing-box-switch #checkbox:checked+.toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .5s;
+}
+
+.writing-box-switch #checkbox:checked+.toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+}
+
+.writing-box-switch #checkbox:checked+.toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+}
+
+.writing-box-switch #checkbox:checked+.toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
+}
+
+/* WRITING BOX */
+
 .writing-box {
     border: 1px white solid;
     border-radius: 15px;
 
-    background-color: rgb(130, 160, 185);
+    background-color: rgb(70, 133, 184);
 
     display: flex;
     flex-direction: column;
@@ -21,6 +103,14 @@
 
     margin-top: 2em;
 
+    opacity: 0;
+    transform: scale(0.0);
+    transition: 0.3s ease-in-out;
+}
+
+.writing-box.appearing {
+    opacity: 1;
+    transform: scale(1);
 }
 
 
@@ -32,9 +122,19 @@
     font-size: 1.4rem;
     font-family: var(--secondary-font);
     padding: 0.2em;
+
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s;
 }
 
-.input-text.msg{
+.input-text:focus {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    z-index: 0;
+}
+
+.input-text.msg {
     width: 90%;
     resize: none;
 }
@@ -43,35 +143,61 @@
     width: 90%;
 }
 
-.button {
-  cursor: pointer;
-  padding: 1em;
-  font-size: 1em;
-  width: 7em;
-  aspect-ratio: 1/0.25;
-  color: white;
-  background: #212121;
-  background-size: cover;
-  background-blend-mode: overlay;
-  border-radius: 0.5em;
-  outline: 0.1em solid #353535;
-  border: 0;
-  box-shadow: 0 0 1em 1em rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-  
+.send-button {
+    font-family: inherit;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #43b1c2 0%, #447bc9 100%);
+    color: white;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    cursor: pointer;
 }
 
-.button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 1em 0.45em rgba(0, 0, 0, 0.1);
-  background: linear-gradient(45deg, #212121, #252525);
-  background: radial-gradient(
-    circle at bottom,
-    rgba(28, 62, 116, 0.5) 10%,
-    #212121 70%
-  );
-  outline: 0;
+.send-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
 }
 
+.send-button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
 
+.send-button span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+}
 
+.send-button svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: all 0.3s;
+}
+
+.send-button .svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5em;
+    transition: all 0.3s;
+}
+
+.send-button:hover .svg-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.send-button:hover svg {
+    transform: rotate(45deg);
+}
