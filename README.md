@@ -19,7 +19,7 @@
 <h1 style="color: cyan"> Front-End </h1>
 
 ## Uso
-* **Iniciando o projeto:** npm start
+* **Iniciando o projeto:** > npm run dev (Agora é com o Vite react app)
 * **Funcionalidades:**
     * Ler e imprimir os posts existentes
     * Fazer o post dos das mensagens e enivar para o server-side
@@ -27,7 +27,7 @@
 * **Exemplos de uso:** O usuário posta uma mensagem e vai direto para o servidor com data, nome e horário.
 
 ## Desenvolvimento
-* **Estrutura do projeto:** O app rodará no client>src>App.js, onde se concentrará toda a informação que o usuário desejar, incluindo os posts e a caixa de escrever a mensagem
+* **Estrutura do projeto:** O app rodará no client>src>App.jsx, onde se concentrará toda a informação que o usuário desejar, incluindo os posts e a caixa de escrever a mensagem
 * **Contribuindo:** Precisando de uma API para ser tratada
 
 ## Licença
