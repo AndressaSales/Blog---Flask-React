@@ -1,4 +1,5 @@
 import './WritingBox.css'
+import PropTypes from 'prop-types';
 
 export const WritingBoxSwitch = ({ isChecked, onChange }) => {
     return (
@@ -11,6 +12,11 @@ export const WritingBoxSwitch = ({ isChecked, onChange }) => {
                 </label>
         </div>
     )
+}
+// This is required on Vite Syntax
+WritingBoxSwitch.propTypes = {
+    isChecked: PropTypes.bool.isRequired,
+    onChange: PropTypes.func.isRequired
 }
 
 export const WritingBox = ({ isChecked }) => {
@@ -31,4 +37,7 @@ export const WritingBox = ({ isChecked }) => {
             </button>
         </section>
     )
+}
+WritingBox.propTypes = {
+    isChecked: PropTypes.bool.isRequired
 }
