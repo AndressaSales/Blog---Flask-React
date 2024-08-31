@@ -1,15 +1,16 @@
 import './WritingBox.css'
 import PropTypes from 'prop-types';
+import { useRef } from 'react';
 
 export const WritingBoxSwitch = ({ isChecked, onChange }) => {
     return (
         <div className='writing-box-switch'>
             <input checked={isChecked} onChange={onChange} type="checkbox" id="checkbox" />
-                <label htmlFor="checkbox" className="toggle">
-                    <div className="bars" id="bar1"></div>
-                    <div className="bars" id="bar2"></div>
-                    <div className="bars" id="bar3"></div>
-                </label>
+            <label htmlFor="checkbox" className="toggle">
+                <div className="bars" id="bar1"></div>
+                <div className="bars" id="bar2"></div>
+                <div className="bars" id="bar3"></div>
+            </label>
         </div>
     )
 }
@@ -20,10 +21,59 @@ WritingBoxSwitch.propTypes = {
 }
 
 export const WritingBox = ({ isChecked }) => {
+
+    const textareaRef = useRef(null);
+    const nameRef = useRef(null);
+
+    function presentingError(field, msg) {
+        field.parentNode.querySelector('.error-msg').textContent = msg
+    }
+
+    const verifyField = (fieldRef) => {
+        const field = fieldRef.current
+
+        if (!field.checkValidity()) {
+
+            if (field.validity.valueMissing) {
+                presentingError(field, `O campo não pode estar vazio.`)
+            } else if (field.validity.tooLong) {
+                presentingError(field, `O campo excedeu o limite de caracteres.`)
+            }
+
+        } else {
+            presentingError(field, '')
+        }
+
+        console.log(field.validity)
+    };
+
     return (
-        <section className={isChecked ? 'writing-box appearing' : 'writing-box'} >
-            <textarea className='input-text msg' maxLength={160} placeholder='Escreva sua mensagem aqui! (max: 160 caracteres)' cols="30" rows="5"></textarea>
-            <input className='input-text name' placeholder='Seu nome' maxLength={40} type="text" />
+        <section className={isChecked ? 'writing-box appearing' : 'writing-box'}>
+            <div className='div-input-text'>
+                <textarea
+                    className='input-text msg'
+                    maxLength={160}
+                    placeholder='Escreva sua mensagem aqui! (max: 160 caracteres)'
+                    cols="30"
+                    rows="5"
+                    onInput={() => verifyField(textareaRef)}
+                    ref={textareaRef}
+                    required
+                ></textarea>
+                <p className='error-msg'></p>
+            </div>
+            <div className='div-input-text'>
+                <input
+                    className='input-text name'
+                    placeholder='Seu nome'
+                    maxLength={40}
+                    type="text"
+                    onInput={() => verifyField(nameRef)}
+                    ref={nameRef}
+                    required
+                />
+                <p className='error-msg'></p>
+            </div>
             <button className='send-button'>
                 <div className="svg-wrapper-1">
                     <div className="svg-wrapper">

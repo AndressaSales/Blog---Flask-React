@@ -82,13 +82,13 @@
 
 /* WRITING BOX */
 
-.writing-box {
+ .writing-box {
     border: 1px white solid;
     border-radius: 15px;
 
     background-color: rgb(70, 133, 184);
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -102,18 +102,35 @@
     width: 90%;
 
     margin-top: 2em;
-
     opacity: 0;
+    
+    animation-play-state: paused;
     transform: scale(0.0);
+    transition: 0.3s ease-in-out;
+
+}
+
+ .writing-box.appearing {
+    display: flex;
+    opacity: 1;
+    transform: scale(1);
     transition: 0.3s ease-in-out;
 }
 
-.writing-box.appearing {
-    opacity: 1;
-    transform: scale(1);
+.div-input-text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 0.5em;
 }
 
-
+.error-msg {
+    font-size: 1.4rem;
+    font-family: var(--secondary-font);
+    transition: 0.3s ease-in-out;
+    color: var(--red-color);
+}
 
 .input-text {
     border: black solid 1px;
