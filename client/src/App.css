@@ -23,7 +23,7 @@
   flex-direction: column;
   width:min-content; */
 
-  background-image: url('../public/falling-leaves-background.gif');
+  background-image: url('/falling-leaves-background.gif');
   background-size: cover;
   background-position: 60% ;
   background-attachment: fixed;
