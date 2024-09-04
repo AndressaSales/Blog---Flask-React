@@ -1,18 +1,38 @@
-from flask import Flask
-# importação do configuração
-from routes.user import user_route
-from db.database import db
-from db.models.users import User
+from flask import Flask, jsonify
+from peewee import *
+import datetime
 
+database = SqliteDatabase('sever.db')
+
+class User(Model):
+    nome = CharField()
+    text = TextField()
+    data = DateTimeField(default=datetime.datetime.now)
+
+
+    class Meta:
+        database = database
+
+    def serialize(self):
+        return{
+            'nome' : self.nome,
+            'text' : self.text,
+        }
+
+
+database.connect()
+database.create_tables([User])
+
+user = User(nome = 'Alex', text = 'Ola')
+user.save()
+
+database.close()
 app = Flask(__name__)
 
-# register_blueprin -> é usada para associar um Blueprint á aplicação flask principal
-app.register_blueprint(user_route)
+@app.route('/user', methods=['GET'])
+def listar():
+    user = User.select()
+    return jsonify([user.serialize()])
 
-def config_rotas():
-    # inicializar o banco de dados
-    db.connect()
-    db.create_tables([User])
- 
-
-app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)

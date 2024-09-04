@@ -1,0 +1,5 @@
+.venv
+comando
+sever.db
+__pycache__
+config
