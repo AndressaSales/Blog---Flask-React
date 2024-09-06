@@ -24,8 +24,8 @@ class User(Model):
 database.connect() 
 database.create_tables([User])
 
-u = User(nome = "jcbakjcbjdcb", text= "ckjdbckdsjcbd")
-u.save()
+usuario = User(nome = "A. Sales", text = "Hello, World!")
+usuario.save()
 
 # ~~~~~~~~~~~~  xxxxxx ~~~~~~~~~~~~~~~
 
