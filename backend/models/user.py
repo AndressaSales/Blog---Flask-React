@@ -2,8 +2,7 @@ from flask import Blueprint, jsonify, request
 from peewee import *
 import datetime
   
-
-
+# conexão de banco de dados aprimorada (assumindo o SQLite )
 database = SqliteDatabase('sever.db')
 
 class User(Model):
@@ -15,29 +14,32 @@ class User(Model):
     class Meta:
         database = database
 
-    def serialize(self):
+    def MyJson(self):
         return{
             'nome' : self.nome,
-            'text' : self.text,
+            'text': self.text
         }
 
 
-database.connect()
+database.connect() 
 database.create_tables([User])
 
-# ~~~~~~~~~~~~ fim da api  ~~~~~~~~~~~~~~~
+u = User(nome = "jcbakjcbjdcb", text= "ckjdbckdsjcbd")
+u.save()
+
+# ~~~~~~~~~~~~  xxxxxx ~~~~~~~~~~~~~~~
 
 
 user_routes = Blueprint('user', __name__)
 
 
-@user_routes.route('/user', methods=['GET'])
+@user_routes.route('/', methods=['GET'])
 def listar():
     users = User.select()
-    return jsonify([user.serialize() for user in users])
+    return jsonify([user.MyJson() for user in users ])
 
 
-@user_routes.route('/user', methods={'POST'})
+@user_routes.route('/', methods={'POST'})
 def inserir():
     data = request.get_json
 
@@ -45,4 +47,4 @@ def inserir():
         nome = data['nome'], text = data['text']
     )
 
-    return jsonify(new.serialize())
+    return jsonify(new)

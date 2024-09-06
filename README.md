@@ -10,7 +10,7 @@
 - Instagram: <a href='https://www.instagram.com/omikaelbaracho/'>@omikaelbaracho</a>
 - Linkedin: <a href="https://www.linkedin.com/in/mikael-baracho-9190571b2/">Mikael Baracho</a>
 
-| **Desenvolvedor back-end chefe:
+| **Desenvolvedor back-end chefe:**
 
 - Github: <a href="https://github.com/AndressaSales"> Andressa Sales</a>
 - Linkedin: <a href="https://www.linkedin.com/in/andressa-sales-04553a281/">Andresssa Sales</a>
