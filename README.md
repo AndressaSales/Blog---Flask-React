@@ -35,8 +35,7 @@
 
 <h1 style="color: green"> Back-End </h1>
 
-# uso
-* **Bliotecas e Framewors**
+* **Bibliotecas e Frameworks**
     * usando o:
         * **Python**~> uma lingaguem de programação versátil e amplamente utilizada conhecida por sua simplicidade e legibilidade. 
         * **Flask**~> Um micro framework web para o python, usado para aplicação web com APIs. 
@@ -49,3 +48,36 @@
 
     * **2. Criação de Novos Registros (POST)**
         *Usado para adicionar novos usuários e postagens.
+
+
+# Link da Api
+
+    * http://127.0.0.1:5000/user/
+
+    * **Obs:** Caso não funcione, siga o manual
+
+# Manual
+
+*Antes de tudo você vai ter que instalar esses dois:
+    *Flask: 
+        * pip install flask
+    *Peewee
+        * pip install peewee
+
+*Agora para ter acesso a pasta do backend, siga esses passos:
+
+    * **1° Passo:**
+        * para entra:
+            * cd backend
+            
+    * **2° Passo:**
+        * dentro da pasta do backend há um pasta com o nome *venv*, precisamos ativar este ambiente
+            * .venv/bin/activate
+                * **Obs:** se esse comando der um erro use esse comando: 
+                    * Set-ExecutionPolicy RemoteSigned -Scope Process, depois ative de novo o ambiente
+    * **3° Passo:**
+        * Inicie:
+            * python main.py
+    * **4° Passo:**
+        * Aperte a url e bote:
+            * /user, para acessar a api
