@@ -10,7 +10,7 @@
 - Instagram: <a href='https://www.instagram.com/omikaelbaracho/'>@omikaelbaracho</a>
 - Linkedin: <a href="https://www.linkedin.com/in/mikael-baracho-9190571b2/">Mikael Baracho</a>
 
-| **Desenvolvedor back-end chefe:**
+| **Desenvolvedor back-end chefe:**  Andressa Sales
 
 - Github: <a href="https://github.com/AndressaSales"> Andressa Sales</a>
 - Linkedin: <a href="https://www.linkedin.com/in/andressa-sales-04553a281/">Andresssa Sales</a>
@@ -48,4 +48,4 @@
         *Permite que obtenham informações de todos os registros em uma tabela.
 
     * **2. Criação de Novos Registros (POST)**
-        * Usado para adicionar novos usuários e postagens.
+        *Usado para adicionar novos usuários e postagens.
