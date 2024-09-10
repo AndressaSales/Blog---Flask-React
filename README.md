@@ -37,7 +37,7 @@
 
 * **Bibliotecas e Frameworks**
     * usando o:
-        * **Python**~> uma lingaguem de programação versátil e amplamente utilizada conhecida por sua simplicidade e legibilidade. 
+        * **Python**~> uma linguagem de programação versátil e amplamente utilizada conhecida por sua simplicidade e legibilidade. 
         * **Flask**~> Um micro framework web para o python, usado para aplicação web com APIs. 
         * **Peewee**~> Uma biblioteca ORM (Object-RElational Mappin  g) para python, que facilita a interação com bancos de dados.
         <br/>
