@@ -52,10 +52,12 @@
 
 # Link da Api
     ```
+
     $ http://127.0.0.1:5000/user/
+
     ```
 
-    **Obs:** Caso não funcione, siga o manual
+    * **Obs:** Caso não funcione, siga o manual
 
 # Manual
 
