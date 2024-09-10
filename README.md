@@ -44,40 +44,46 @@
     Com esses três elementos trabalhando juntos, foi possível criar uma API.
 * **Funcionalidade:**
     * **1. Recuperação de Dados (GET)**
-        *Permite que obtenham informações de todos os registros em uma tabela.
+        * Permite que obtenham informações de todos os registros em uma tabela.
 
     * **2. Criação de Novos Registros (POST)**
-        *Usado para adicionar novos usuários e postagens.
+        * Usado para adicionar novos usuários e postagens.
 
 
 # Link da Api
+    ```
+    $ http://127.0.0.1:5000/user/
+    ```
 
-    * http://127.0.0.1:5000/user/
-
-    * **Obs:** Caso não funcione, siga o manual
+    **Obs:** Caso não funcione, siga o manual
 
 # Manual
 
-*Antes de tudo você vai ter que instalar esses dois:
-    *Flask: 
-        * pip install flask
-    *Peewee
-        * pip install peewee
+* Antes de tudo você vai ter que instalar esses dois:
+    # Install
+    * **Flask:** 
+        ```
+       $ pip install flask
+       ```
+    * **Peewee:**
+        ```
+        $ pip install peewee
+        ```
 
-*Agora para ter acesso a pasta do backend, siga esses passos:
+* Agora para ter acesso a pasta do backend, siga esses passos:
 
     * **1° Passo:**
         * para entra:
             * cd backend
             
     * **2° Passo:**
-        * dentro da pasta do backend há um pasta com o nome *venv*, precisamos ativar este ambiente
+        * dentro da pasta do backend há um pasta com o nome **venv**, precisamos ativar este ambiente
             * .venv/bin/activate
                 * **Obs:** se esse comando der um erro use esse comando: 
                     * Set-ExecutionPolicy RemoteSigned -Scope Process, depois ative de novo o ambiente
     * **3° Passo:**
-        * Inicie:
+        * run:
             * python main.py
     * **4° Passo:**
-        * Aperte a url e bote:
+        * Aperte na url e bote:
             * /user, para acessar a api
