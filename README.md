@@ -54,35 +54,3 @@
 
     $ 
 #
-    * **Obs:** Caso não funcione, siga o manual
-
-# Manual
-
-* Antes de tudo você vai ter que instalar esses dois:
-    # Install
-    * **Flask:** 
-        ```
-       $ pip install flask
-       ```
-    * **Peewee:**
-        ```
-        $ pip install peewee
-        ```
-
-* Agora para ter acesso a pasta do backend, siga esses passos:
-
-    * **1° Passo:**
-        * para entra:
-            * cd backend
-            
-    * **2° Passo:**
-        * dentro da pasta do backend há um pasta com o nome **venv**, precisamos ativar este ambiente
-            * .venv/bin/activate
-                * **Obs:** se esse comando der um erro use esse comando: 
-                    * Set-ExecutionPolicy RemoteSigned -Scope Process, depois ative de novo o ambiente
-    * **3° Passo:**
-        * run:
-            * python main.py
-    * **4° Passo:**
-        * Aperte na url e bote:
-            * /user, para acessar a api
