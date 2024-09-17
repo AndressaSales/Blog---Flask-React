@@ -2,13 +2,13 @@
     "version": 2,
     "builds": [
         {
-            "src" : "./api",
+            "src" : "./user.py",
             "use": "@vercel/node"
         }
     ],
     "routes":[
         {
-            "src": "/api/(.*)",
+            "src": "/(.*)",
             "dest": "/"
         }
     ]
