@@ -1,8 +1,7 @@
-from flask import Blueprint, jsonify, request
+from flask import Flask, jsonify, request
 from peewee import *
 import datetime
-  
-# conexão de banco de dados aprimorada (assumindo o SQLite )
+
 database = SqliteDatabase('sever.db')
 
 class User(Model):
@@ -26,17 +25,19 @@ database.create_tables([User])
 
 # ~~~~~~~~~~~~  xxxxxx ~~~~~~~~~~~~~~~
 
+app = Flask(__name__)
 
-user_routes = Blueprint('user', __name__)
+@app.route('/')
+def home():
+    return "Olá"
 
-
-@user_routes.route('/', methods=['GET'])
+@app.route('/users', methods=['GET'])
 def listar():
     users = User.select()
     return jsonify([user.MyJson() for user in users ])
 
 
-@user_routes.route('/', methods={'POST'})
+@app.route('/users', methods={'POST'})
 def inserir():
     data = request.get_json
 
@@ -45,3 +46,6 @@ def inserir():
     )
 
     return jsonify(new)
+
+if __name__ == '__main__':
+    app.run(debug=True)
