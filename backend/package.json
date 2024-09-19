@@ -1,28 +1,13 @@
 {
   "name": "backend",
-  "version": "0.0.1",
-  "description": "just learining Package JSON",
-  "main": "main.py",
-  "engines": {
-    "node": "20.x"
-  },
+  "version": "1.0.0",
+  "main": "mian.py",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "python main.py"
-
+    "start": "python main.py",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AndressaSales/Blog--Flask-React.git"
-  },
-  "keywords": [
-    "packege",
-    "json"
-  ],
+  "keywords": [],
   "author": "Andressa Sales",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/AndressaSales/Blog--Flask-React/issues"
-  },
-  "homepage": "https://github.com/AndressaSales/Blog--Flask-React#readme"
+  "description": ""
 }
