@@ -2,12 +2,15 @@ from flask import jsonify, Blueprint, request
 from peewee import DateTimeField, TextField, CharField, SqliteDatabase, Model
 import datetime
 
-db = SqliteDatabase('server.db')
+db = SqliteDatabase('sever.db')
 
 class User(Model):
     nome = CharField()
     text = TextField()
     time = DateTimeField(default= datetime.datetime.now)
+
+    class Meta:
+        database = db
 
     def MyJson(self):
         return{
